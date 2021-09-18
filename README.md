@@ -28,6 +28,7 @@
 >>>
 >>> 特殊輸入參數：
 >>>> 以 united 取代 USA
+>>>> 
 >>>> 以 south-korea 表示 South Korea
 >>>  
 > ### discordbot/src/xkcdpic.py
