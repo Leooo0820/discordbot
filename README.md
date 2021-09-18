@@ -1,6 +1,6 @@
 # Discord Bot
 
-## 程式檔案架構
+## 程式檔案架構及功能說明
 > ### discordbot/src/guess.py 猜數字遊戲（俗稱幾A幾B小遊戲）
 >> 
 >> 說明：
