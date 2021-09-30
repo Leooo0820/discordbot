@@ -39,14 +39,10 @@ class lottery(commands.Cog):
         lott=soup.find_all("td", class_="td_w font_black14b_center")
         for i in range(6):
             lott1.append(lott[i].span.string)
-        await ctx.send("特別號(無請任意輸入字母)")
-        res=await self.bot.wait_for('message',check=is_valid,timeout=300)
+        '''await ctx.send("特別號(無請任意輸入字母)")
+        res=await self.bot.wait_for('message',check=is_valid,timeout=300)'''
         spe=soup.find_all("td",class_="td_w font_red14b_center")
         special=spe[0].span.string
-        if res.content==special:
-            s=1
-        else :
-        	s=0
         award=soup.find_all('td',class_='td_w font_black14b td_hm')
         prize=[]
         for i in range(8,16):
@@ -56,6 +52,10 @@ class lottery(commands.Cog):
                 prize.append(award[i].span.string)
         m=n.content.split()
         a=sum([1 for i in range(6) if m[i] in lott1])
+        if special in m:
+            s=1
+        else :
+            s=0
         if a==3 and s==0:
         	await ctx.send(f"Win {prize[7]}")
         elif a==2 and s==1:
